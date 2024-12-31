@@ -7,7 +7,7 @@ let parts = [];
 /*图片合集*/
 let images = [
   "https://t.mwm.moe/fj",
-  "http://www.98qy.com/sjbz/api.php",
+  "https://www.98qy.com/sjbz/api.php",
   "https://imgapi.xl0408.top/index.php",
 ];
 

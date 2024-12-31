@@ -6,9 +6,9 @@ let parts = [];
 
 /*图片合集*/
 let images = [
-  "http://www.dmoe.cc/random.php",
-  "https://api.dongmanxingkong.com/suijitupian/acg/1080p/index.php",
-  "https://api.ghser.com/random/api.php",
+  "https://t.mwm.moe/fj",
+  "http://www.98qy.com/sjbz/api.php",
+  "https://imgapi.xl0408.top/index.php",
 ];
 
 let current = 0;

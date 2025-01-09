@@ -1,89 +1,27 @@
 ﻿<!DOCTYPE html>
-<html>
-<!--head模块-->
-
+<html lang="zh-CN">
 <head>
-	<!--字符编码-->
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<!--语言-->
-	<meta http-equiv="Content-Language" content="zh-CN">
-	<!--移动端适配-->
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<!-- 避免IE使用兼容模式 -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<!--窗口设定-->
-	<meta http-equiv="Window-target" content="_top">
-	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-	<meta name="HandheldFriendly" content="true">
-	<!-- 微软的老式浏览器 -->
-	<meta name="MobileOptimized" content="320">
-	<!-- windows phone 点击无高光 -->
-	<meta name="msapplication-tap-highlight" content="no">
-	<!--百度禁止转码-->
-	<meta http-equiv="Cache-Control" content="no-siteapp">
-	<!--浏览器的兼容配置-->
-	<!--Microsoft Internet Explorer-->
-	<!--是否开启cleartype显示效果-->
-	<meta http-equiv="cleartype" content="on">
-	<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
-	<!--Pinned Site-->
-	<!-- IE 10 / Windows 8 -->
-	<meta name="msapplication-TileImage" content="pinned-tile-144.png">
-	<meta name="msapplication-TileColor" content="#009900">
-	<!--IE 11 / Windows 9.1-->
-	<meta name="msapplication-config" content="ieconfig.xml">
-	<!--Google Chrome-->
-	<!--禁止自动翻译-->
-	<meta name="google" value="notranslate">
-	<!--360浏览器-->
-	<!--极速模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="renderer" content="webkit">
-	<!--QQ手机浏览器-->
-	<!--锁定屏幕在特定方向-->
-	<meta name="x5-orientation" content="portrait">
-	<!-- 全屏显示 -->
-	<meta name="x5-fullscreen" content="true">
-	<!-- 应用模式 -->
-	<meta name="x5-page-mode" content="app">
-	<!--UC浏览器-->
-	<!-- uc强制竖屏 -->
-	<meta name="screen-orientation" content="portrait">
-	<!-- UC强制全屏 -->
-	<meta name="full-screen" content="yes">
-	<!-- UC应用模式 -->
-	<meta name="browsermode" content="application">
-	<!-- 禁止自动探测手机/邮箱号码 -->
-	<meta name="format-detection" content="telephone=no, email=no">
-	<!-- Add to Home Screen添加到主屏 -->
-	<!-- 是否启用 WebApp 全屏模式 -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<!-- 添加到主屏后的标题 -->
-	<meta name="apple-mobile-web-app-title" content="A1_Panda的小屋♂">
-	<!--Google Android-->
-	<meta name="theme-color" content="#CCFFFF">
-	<!-- 添加到主屏 -->
-	<meta name="mobile-web-app-capable" content="yes">
-	<!--引入核心css-->
-	<link rel="stylesheet" href="res/css/main.css" />
-	<link rel="stylesheet" href="res/css/style.css" />
-	<!--选择性引入css-->
-	<noscript>
-		<link rel="stylesheet" href="res/css/noscript.css" />
-	</noscript>
-	<!--SEO优化-->
-	<!--标题-->
+	<!-- SEO相关 -->
 	<title>A1_Panda的小屋♂ | Welcome</title>
-	<!--关键词-->
-	<meta name="keywords" content="A1_Panda,个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
-	<!--描述-->
 	<meta name="description" content="A1_Panda的小屋♂">
-	<!--作者 author-->
+	<meta name="keywords" content="A1_Panda,个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
 	<meta name="author" content="A1_Panda@outlook.com">
-	<!--搜索引擎索引方式-->
-	<meta name="robots" content="all">
-	<!--logo-->
+	<!-- 移动端相关 -->
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="A1_Panda的小屋♂">
+	<meta name="theme-color" content="#CCFFFF">
+	<!-- 样式表 -->
+	<link rel="stylesheet" href="res/css/main.css">
+	<link rel="stylesheet" href="res/css/style.css">
+	<noscript>
+		<link rel="stylesheet" href="res/css/noscript.css">
+	</noscript>
 	<link rel="shortcut icon" href="https://q1.qlogo.cn/g?b=qq&nk=3121280556&s=640" type="image/x-icon">
 </head>
 
@@ -165,65 +103,53 @@
 	</div>
 
 	<script>
-		// 使用 fetch 获取数据
-		fetch('https://2024.ipchaxun.com/')
-			.then(response => response.json())
-			.then(data => {
-				console.log('API 返回的数据:', data); // 调试信息
-	
-				// 显示 IP 地址
-				document.getElementById('ip').innerText = data.ip;
-	
-				// 显示节点信息
-				console.log('节点信息:', data.data[4]); // 调试信息
-				document.getElementById('node').innerText = data.data[4];
-	
-				// 显示位置信息
-				console.log('位置信息:', data.data[1], data.data[2], data.data[3]); // 调试信息
-				document.getElementById('location').innerText = data.data[1] + ' ' + data.data[2] + ' ' + data.data[3];
-			})
-			.catch(error => console.error('Error fetching data:', error));
-	</script>
+		// IP 信息获取
+		async function fetchIPInfo() {
+			try {
+				const response = await fetch('https://2024.ipchaxun.com/');
+				const data = await response.json();
+				
+				document.getElementById('ip').textContent = data.ip;
+				document.getElementById('node').textContent = data.data[4];
+				document.getElementById('location').textContent = 
+					`${data.data[1]} ${data.data[2]} ${data.data[3]}`;
+			} catch (error) {
+				console.error('获取IP信息失败:', error);
+			}
+		}
 
-	<script>
+		// 二维码显示控制
+		const wechatcode = document.getElementById('wechatcode');
+		const codeimg = document.getElementById('codeimg');
+		const codetext = document.getElementById('codetext');
+
 		function setcode(app) {
-			if (document.getElementById('codeimg').title != app) {
-				document.getElementById('codeimg').src = 'res/image/'+app+'.png';
-				document.getElementById('codeimg').title = app;
-				document.getElementById('codetext').textContent = app+" Code";
-				document.getElementById('wechatcode').style.display = 'block';
+			if (codeimg.title !== app) {
+				codeimg.src = `res/image/${app}.png`;
+				codeimg.title = app;
+				codetext.textContent = `${app} Code`;
+				wechatcode.style.display = 'block';
 			} else {
-				codedisplay()
+				codedisplay();
 			}
 		}
 
 		function codedisplay() {
-			var wechatcode = document.getElementById('wechatcode');
-			wechatcode.style.display = (wechatcode.style.display == 'none') ? 'block' : 'none';
+			wechatcode.style.display = 
+				wechatcode.style.display === 'none' ? 'block' : 'none';
 		}
-		
-	</script>
 
-	<script src="res/js/Photo.js"></script>
-	<script src="res/js/script.js"></script>
-
-	<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function () {
-				document.body.className = document.body.className.replace(/\bis-loading\b/, '');
-			});
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
-	</script>
-	<!--落叶效果-->
-	<script src="res/js/jquery.min.js"></script>
-	<script src="res/js/su.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$('body').wpSuperSnow({
-				flakes: ['res/image/007.png', 'res/image/006.png', 'res/image/004.png',
-					'res/image/005.png', 'res/image/001.png', 'res/image/003.png',
-					'res/image/002.png', 'res/image/008.png'
+		// 页面加载完成后执行
+		document.addEventListener('DOMContentLoaded', () => {
+			fetchIPInfo();
+			
+			// 初始化落叶效果
+			jQuery('body').wpSuperSnow({
+				flakes: [
+					'res/image/001.png', 'res/image/002.png', 
+					'res/image/003.png', 'res/image/004.png',
+					'res/image/005.png', 'res/image/006.png', 
+					'res/image/007.png', 'res/image/008.png'
 				],
 				totalFlakes: '100',
 				zIndex: '999999',
@@ -232,11 +158,23 @@
 				useFlakeTrans: false
 			});
 		});
+
+		// 移除加载状态
+		window.addEventListener('load', () => {
+			document.body.className = 
+				document.body.className.replace(/\bis-loading\b/, '');
+		});
 	</script>
-	<!-- 禁止右键和禁止选中文字 -->
-	<body onselectstart="return false" oncontextmenu="self.event.returnValue=false"></body>
-	<!-- 背景音乐代码 -->
-	<audio autoplay="autoplay" loop="loop" src="res/music/game over.mp3" type="audio/mpeg">
+
+	<!-- 外部脚本引用 -->
+	<script src="res/js/jquery.min.js" defer></script>
+	<script src="res/js/su.js" defer></script>
+	<script src="res/js/Photo.js" defer></script>
+	<script src="res/js/script.js" defer></script>
+
+	<!-- 背景音乐 -->
+	<audio autoplay loop>
+		<source src="res/music/game over.mp3" type="audio/mpeg">
 	</audio>
 </body>
 </html>
